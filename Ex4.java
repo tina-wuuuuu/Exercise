@@ -1,37 +1,34 @@
-package Date0708;
+package Date0709;
 
 import java.util.Scanner;
 
 public class Ex4 {
-//判斷帳號密碼是否正確
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String username,password,uname,pword;
-		username="tina";
-		password="apple";
+		// 顯示1~100的質數(輸入數字判斷是不是質數)
+		boolean prime=true;
+		int num;
 		Scanner scn = new Scanner(System.in);
-		System.out.println("請輸入帳號");
-		uname=scn.next();
-		System.out.println("請輸入密碼");
-		pword=scn.next();
-		if (uname.equals(username)) {
-			System.out.println("帳號輸入正確");
+		System.out.print("請輸入整數做質數測試:");
+		num=scn.nextInt();
+		if (num==1) {
+			System.out.printf("%d是質數",num);
+		}
+		if (num==2) {
+			System.out.printf("%d是質數",num);
 		}else {
-			System.out.println("帳號有誤");
+			for(int i=2;i<num;i++) {
+				if(num%i==0) {
+					System.out.printf("%d不是質數", num);
+					prime=false;
+					break;
+				}
 			}
-		if (pword.equals(password)) {
-			System.out.println("密碼輸入正確");
-		}else {
-			System.out.println("密碼有誤");
+			if (prime) {
+				System.out.printf("%d是質數",num);
+			}
 		}
-		if (uname.equals(username)|| pword.equals(password)) {
-			System.out.println("登入成功");
-		}
-		else  {
-			System.out.println("登入失敗");
-		}
-	scn.close();
+		scn.close();
 	}
-	
 
 }
