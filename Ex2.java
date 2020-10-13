@@ -1,4 +1,4 @@
-package Date0702;
+package Date0708;
 
 import java.util.Scanner;
 
@@ -6,21 +6,26 @@ public class Ex2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int BMI; double height; double weight;
-		Scanner scn;
-		try {
-			scn = new Scanner(System.in);
-			System.out.println("è«‹è¼¸å…¥èº«é«˜(cm):");
-			height = scn.nextDouble()/100;
-			System.out.println("è«‹è¼¸å…¥é«”é‡(kg)");
-			weight = scn.nextDouble();
-			BMI = (int) (weight/ Math.pow(height, 2));
-			System.out.println("BMI= "+BMI);
-			scn.close();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			System.out.println("æ ¼å¼éŒ¯èª¤");
+		//§PÂ_¤j¤p¼g¦r¦ê
+		System.out.println("½Ğ¿é¤J");
+		Scanner console = new Scanner(System.in);
+		String Str =console.nextLine();
+		StringBuilder upperStr= new StringBuilder();
+		StringBuilder lowerStr= new StringBuilder();
+		int i =0;
+		while(i<Str.length()){
+			char chr =Str.charAt(i);
+			if (Character.isUpperCase(chr)) {
+				upperStr.append(chr);
+			}else if(Character.isLowerCase(chr)) {
+				lowerStr.append(chr);
+			}
+			i++;
 		}
+		System.out.println("¤j¼g¦r¥À¦³:"+ upperStr.toString());
+		System.out.println("¤p¼g¦r¥À¦³:"+ lowerStr.toString());
+		console.close();
 	}
+	
 
 }
