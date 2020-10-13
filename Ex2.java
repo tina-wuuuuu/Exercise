@@ -1,31 +1,16 @@
-package Date0708;
-
-import java.util.Scanner;
+package Date0709;
 
 public class Ex2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//判斷大小寫字串
-		System.out.println("請輸入");
-		Scanner console = new Scanner(System.in);
-		String Str =console.nextLine();
-		StringBuilder upperStr= new StringBuilder();
-		StringBuilder lowerStr= new StringBuilder();
-		int i =0;
-		while(i<Str.length()){
-			char chr =Str.charAt(i);
-			if (Character.isUpperCase(chr)) {
-				upperStr.append(chr);
-			}else if(Character.isLowerCase(chr)) {
-				lowerStr.append(chr);
+		//顯示99乘法表
+		for (int i=1;i<=9;i++) {
+			for (int j=1;j<=9;j++) {
+				System.out.print(i+"*"+j+"="+(i*j)+"\t");
 			}
-			i++;
+			System.out.println();
 		}
-		System.out.println("大寫字母有:"+ upperStr.toString());
-		System.out.println("小寫字母有:"+ lowerStr.toString());
-		console.close();
 	}
-	
 
 }
