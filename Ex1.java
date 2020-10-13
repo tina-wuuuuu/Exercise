@@ -1,21 +1,42 @@
-package Date0708;
+package Date0716;
 
 import java.util.Scanner;
 
 public class Ex1 {
-//判斷奇偶數
+
 	public static void main(String[] args) {
-		int number;
-		Scanner scn=new Scanner(System.in);
-		System.out.println("請輸入值");
-		number=scn.nextInt();
-		if (number % 2==0) {
-			System.out.println("該值為偶數");
-		}else {
-			System.out.println("該值為奇數");
+		// TODO Auto-generated method stub
+		Scanner scn = new Scanner(System.in);
+		System.out.println("�п�J����=");
+		int score = scn.nextInt();
+		switch (score / 10) {
+		case 10:
+		case 9:
+			System.out.println("A grade");
+			break;
+		case 8:
+			System.out.println("B grade");
+			break;
+		case 7:
+			System.out.println("C grade");
+			break;
+		case 6:
+			System.out.println("D grade");
+			break;
+		case 5:
+		case 4:
+		case 3:
+		case 2:
+		case 1:
+		case 0:
+			System.out.println("F grade");
+			break;
+		default:
+			System.out.println("error");
+			break;
+
 		}
 		scn.close();
-		
 	}
 
 }
