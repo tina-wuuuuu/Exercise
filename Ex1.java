@@ -9,16 +9,16 @@ public class Ex1 {
 		double radius; double area; double vol;
 		try {
 			Scanner scn = new Scanner(System.in);
-			System.out.print("½Ğ¿é¤J¥b®|: ");
+			System.out.print("è«‹è¼¸å…¥åŠå¾‘: ");
 			radius = scn.nextDouble();
 			area= (Math.PI*Math.pow(radius, 2));
-			System.out.println("¶ê­±¿n="+((int)Math.ceil(area*100)/100.0));
+			System.out.println("åœ“é¢ç©="+((int)Math.ceil(area*100)/100.0));
 			vol= (((double)4/3)*(Math.PI*Math.pow(radius, 3)));
-			System.out.println("²yÅé¿n="+((int)Math.ceil(vol*100)/100.0));
+			System.out.println("çƒé«”ç©="+((int)Math.ceil(vol*100)/100.0));
 			scn.close();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			System.out.println("®æ¦¡¿ù»~");
+			System.out.println("æ ¼å¼éŒ¯èª¤");
 		}
 	}
 
