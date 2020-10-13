@@ -1,26 +1,18 @@
-package Date0708;
-
-import java.util.Scanner;
+package Date0709;
 
 public class Ex3 {
-//耞Θ罿のぃの
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		double score;
-		Scanner scn = new Scanner(System.in);
-		System.out.println("叫块Θ罿");
-		score=scn.nextDouble();
-		if(score<0 || score >100) {
-			System.out.println("戈岿粇");	
-		}
-		else if (score>=60) {
-			System.out.println("の");
+		//陪ボ1~100案计
+		int i;
+		for (i=1;i<=100;i++) {
+			if(i%2==0) {
+				System.out.println(i+"=案计");
+			}else {
+				System.out.println(i+"=计");
 			}
-		else if(score<60 ) {
-			System.out.println("ぃの");
 		}
-		scn.close();
-		
 	}
 
 }
